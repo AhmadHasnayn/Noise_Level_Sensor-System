@@ -84,13 +84,11 @@ equirements_noisecheck.txt
 ##  Installation
 
 ### Step 1: Clone the Repository
-`ash
 git clone https://github.com/yourusername/noise-level-detection.git
 cd noise-level-detection
 `
 
 ### Step 2: Create Virtual Environment
-`ash
 # Windows
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -101,12 +99,12 @@ source .venv/bin/activate
 `
 
 ### Step 3: Install Dependencies
-`ash
-pip install -r requirements_noisecheck.txt
+
+pip install -r requirements.txt
 `
 
 ### Step 4: Verify Audio Setup
-`ash
+
 # List available audio devices
 python -c "import sounddevice as sd; print(sd.query_devices())"
 `
@@ -157,7 +155,7 @@ PLOT_DIR = os.path.join(DATA_PATH, "plots")     # Analysis plots
 ## 🎯 Usage
 
 ### Basic Operation
-`ash
+
 # Run with debug logging
 python noise_monitor_updated.py --debug
 
@@ -220,7 +218,7 @@ oise_monitor/node_{NODE_ID}/hourly
 
 ### Noise Events
 **Topic**: 
-oise_monitor/node_{NODE_ID}/clip
+noise_monitor/node_{NODE_ID}/clip
 `json
 {
   "file": "/home/rootpi/Noise_monitor/clips/Noisevent_0_87.5_20260428_120001.wav",
@@ -234,7 +232,7 @@ oise_monitor/node_{NODE_ID}/clip
 
 ### Location Data
 **Topic**: 
-oise_monitor/node_{NODE_ID}/location
+noise_monitor/node_{NODE_ID}/location
 `json
 {
   "latitude": 12.9716,
@@ -312,7 +310,7 @@ print(f'RMS: {np.sqrt(np.mean(audio**2)):.6f}')
 `
 
 ### MQTT Connection
-`ash
+
 # Test MQTT connection
 python -c "
 import paho.mqtt.client as mqtt
@@ -349,9 +347,9 @@ python noise_monitor_updated.py --debug
 5. Open a Pull Request
 
 ### Development Setup
-`ash
+
 # Install development dependencies
-pip install -r requirements-dev.txt
+pip install -r requirements.txt
 
 # Run tests
 python -m pytest
