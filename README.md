@@ -295,7 +295,7 @@ CALIBRATION_RMS = 0.12
 ## 🔍 Troubleshooting
 
 ### Audio Issues
-`ash
+
 # Check audio devices
 python -c "import sounddevice as sd; print(sd.query_devices())"
 
@@ -321,7 +321,6 @@ client.disconnect()
 print('MQTT test successful')
 "
 `
-
 ### Common Issues
 
 | Issue | Symptom | Solution |
@@ -334,7 +333,6 @@ print('MQTT test successful')
 
 ### Debug Mode
 Run with --debug flag for detailed logging:
-`ash
 python noise_monitor_updated.py --debug
 `
 
