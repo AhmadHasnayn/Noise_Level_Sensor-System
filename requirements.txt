@@ -1,0 +1,9 @@
+numpy==1.26.4
+scipy==1.11.4
+sounddevice==0.4.7
+soundfile>=0.12
+paho-mqtt==1.6.1
+librosa>=0.10
+#for plotting 
+matplotlib>=3.5
+
